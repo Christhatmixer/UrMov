@@ -9,3 +9,5 @@ authy == 2.1.5
 
 # pythonBackend.py: 1
 stripe == 1.79.1
+
+gunicorn == 19.7.1
