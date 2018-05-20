@@ -16,6 +16,8 @@ target 'Urmove' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  # Activity
+  pod 'NVActivityIndicatorView'
   # Google
   pod 'GoogleMaps'
   pod 'GooglePlaces'

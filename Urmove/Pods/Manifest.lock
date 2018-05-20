@@ -98,6 +98,9 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - NVActivityIndicatorView (4.2.0):
+    - NVActivityIndicatorView/Presenter (= 4.2.0)
+  - NVActivityIndicatorView/Presenter (4.2.0)
   - Protobuf (3.5.0)
   - SkyFloatingLabelTextField (3.4.1)
 
@@ -112,6 +115,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - IQKeyboardManagerSwift
+  - NVActivityIndicatorView
   - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC REPOS:
@@ -142,6 +146,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - leveldb-library
     - nanopb
+    - NVActivityIndicatorView
     - Protobuf
     - SkyFloatingLabelTextField
 
@@ -172,9 +177,10 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 59d4b0e140bc546c3c76ae5bb35b3dafd10b8172
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   SkyFloatingLabelTextField: 8085f20f57f74a00cfcae58099299faa1a971035
 
-PODFILE CHECKSUM: 622634cf493f13f0a515c539e12c3d47b07ac950
+PODFILE CHECKSUM: 1a3cd787a31b3a9b5a46a4bcc4ff14e93bb47835
 
 COCOAPODS: 1.5.0

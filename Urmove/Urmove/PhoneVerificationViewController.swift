@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import NVActivityIndicatorView
 class PhoneVerificationViewController: UIViewController {
     let backendBaseURL: String? = "https://urmove.herokuapp.com/"
 
@@ -27,11 +28,16 @@ class PhoneVerificationViewController: UIViewController {
         sendNumber(phoneNumber: self.phoneNumberTextField.text!)
     }
     func sendNumber(phoneNumber: String){
+        let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40), type: NVActivityIndicatorType.circleStrokeSpin, color: UIColor(displayP3Red: 33.0/255, green: 141.0/255, blue: 22/255, alpha: 1.0), padding: 0)
+        loadingIndicator.center = self.view.center
+        loadingIndicator.startAnimating() //UI will freeze alamofire. Give user something to look at
+        self.view.addSubview(loadingIndicator)
         let urlString = "https://urmove.herokuapp.com/requestVerificationCode"
         var params = ["phoneNumber": phoneNumber] as [String : Any]
-        Alamofire.request(urlString, method: .post, parameters: params, encoding: JSONEncoding.default).responseString { (response) in
+        Alamofire.request("https://urmove.herokuapp.com/requestVerificationCode", method: .post, parameters: params, encoding: JSONEncoding.default).responseString { (response) in
             print(response.response)
-            
+            print(response.result.description)
+            loadingIndicator.stopAnimating()
         }
      
     }
