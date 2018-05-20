@@ -1,0 +1,37 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Urmove' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Urmove
+  #KEYBOARD
+  pod 'IQKeyboardManagerSwift'
+  #FACEBOOK
+  pod 'FacebookLogin'
+  # Networking
+  pod 'Alamofire'
+  # Firebase
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  # Google
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  # ALERTS
+  pod 'EZAlertController', '3.2'
+  pod 'Alertift', '~> 3.0'
+  # TEXT FIELDS
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
+  target 'UrmoveTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'UrmoveUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

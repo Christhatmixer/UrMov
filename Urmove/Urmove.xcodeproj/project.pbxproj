@@ -1,0 +1,830 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		496C1EE5563E74EB92B2CAA9 /* Pods_UrmoveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BC29535837721C9C7C2B0E /* Pods_UrmoveUITests.framework */; };
+		8C978D18B7C02FC2C0BCFF87 /* Pods_Urmove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED54B4008D25E78FDDCC342 /* Pods_Urmove.framework */; };
+		AA65C1E720B0C8890007553E /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65C1E620B0C8890007553E /* PhoneVerificationViewController.swift */; };
+		AAAA9EA2209EA0280035CDEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EA1209EA0280035CDEA /* AppDelegate.swift */; };
+		AAAA9EA4209EA0280035CDEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EA3209EA0280035CDEA /* ViewController.swift */; };
+		AAAA9EA7209EA0280035CDEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAA9EA5209EA0280035CDEA /* Main.storyboard */; };
+		AAAA9EAA209EA0280035CDEA /* Urmove.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EA8209EA0280035CDEA /* Urmove.xcdatamodeld */; };
+		AAAA9EAC209EA03C0035CDEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAA9EAB209EA03C0035CDEA /* Assets.xcassets */; };
+		AAAA9EAF209EA03C0035CDEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAA9EAD209EA03C0035CDEA /* LaunchScreen.storyboard */; };
+		AAAA9EBA209EA03D0035CDEA /* UrmoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EB9209EA03D0035CDEA /* UrmoveTests.swift */; };
+		AAAA9EC5209EA03D0035CDEA /* UrmoveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EC4209EA03D0035CDEA /* UrmoveUITests.swift */; };
+		AAAA9ED3209EACC40035CDEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAAA9ED2209EACC40035CDEA /* GoogleService-Info.plist */; };
+		AAAA9ED5209F9A1B0035CDEA /* driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9ED4209F9A1B0035CDEA /* driver.swift */; };
+		AAAA9ED8209F9D600035CDEA /* customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9ED7209F9D600035CDEA /* customer.swift */; };
+		AAAA9EDA20A02F4E0035CDEA /* CustomerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9ED920A02F4D0035CDEA /* CustomerHomeViewController.swift */; };
+		AAAA9EDC20A0CF370035CDEA /* car.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EDB20A0CF370035CDEA /* car.swift */; };
+		AAAA9EDE20A4E2C70035CDEA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EDD20A4E2C70035CDEA /* SignupViewController.swift */; };
+		AADDBC2C20A7E05B00B14618 /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADDBC2B20A7E05A00B14618 /* CarInfoViewController.swift */; };
+		BDD10E6795A6D3849CA9DA29 /* Pods_UrmoveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF755BB1466135E660FE565 /* Pods_UrmoveTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAAA9EB6209EA03D0035CDEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAAA9E96209EA0280035CDEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAAA9E9D209EA0280035CDEA;
+			remoteInfo = Urmove;
+		};
+		AAAA9EC1209EA03D0035CDEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AAAA9E96209EA0280035CDEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAAA9E9D209EA0280035CDEA;
+			remoteInfo = Urmove;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16BC29535837721C9C7C2B0E /* Pods_UrmoveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrmoveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF755BB1466135E660FE565 /* Pods_UrmoveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrmoveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A9057EB8868FD611A687F93 /* Pods-UrmoveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrmoveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrmoveTests/Pods-UrmoveTests.release.xcconfig"; sourceTree = "<group>"; };
+		6ED54B4008D25E78FDDCC342 /* Pods_Urmove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Urmove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F18F408598963C29A3E9AF2 /* Pods-UrmoveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrmoveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrmoveUITests/Pods-UrmoveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		83209CFE423DC87E0D93494D /* Pods-Urmove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Urmove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Urmove/Pods-Urmove.debug.xcconfig"; sourceTree = "<group>"; };
+		94CB8590E2019CA1E15787F2 /* Pods-UrmoveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrmoveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrmoveUITests/Pods-UrmoveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A519D0C2A8C2E5C08AE0F82C /* Pods-Urmove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Urmove.release.xcconfig"; path = "Pods/Target Support Files/Pods-Urmove/Pods-Urmove.release.xcconfig"; sourceTree = "<group>"; };
+		AA65C1E620B0C8890007553E /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		AAAA9E9E209EA0280035CDEA /* Urmove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Urmove.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAA9EA1209EA0280035CDEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAAA9EA3209EA0280035CDEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAAA9EA6209EA0280035CDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAAA9EA9209EA0280035CDEA /* Urmove.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Urmove.xcdatamodel; sourceTree = "<group>"; };
+		AAAA9EAB209EA03C0035CDEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAAA9EAE209EA03C0035CDEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAAA9EB0209EA03C0035CDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAA9EB5209EA03D0035CDEA /* UrmoveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrmoveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAA9EB9209EA03D0035CDEA /* UrmoveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrmoveTests.swift; sourceTree = "<group>"; };
+		AAAA9EBB209EA03D0035CDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAA9EC0209EA03D0035CDEA /* UrmoveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrmoveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAA9EC4209EA03D0035CDEA /* UrmoveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrmoveUITests.swift; sourceTree = "<group>"; };
+		AAAA9EC6209EA03D0035CDEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAA9ED2209EACC40035CDEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AAAA9ED4209F9A1B0035CDEA /* driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = driver.swift; path = "../New Group/driver.swift"; sourceTree = "<group>"; };
+		AAAA9ED7209F9D600035CDEA /* customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customer.swift; sourceTree = "<group>"; };
+		AAAA9ED920A02F4D0035CDEA /* CustomerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomeViewController.swift; sourceTree = "<group>"; };
+		AAAA9EDB20A0CF370035CDEA /* car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = car.swift; sourceTree = "<group>"; };
+		AAAA9EDD20A4E2C70035CDEA /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		AADDBC2B20A7E05A00B14618 /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
+		E73F0C2A3DA6ECA424B9D371 /* Pods-UrmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrmoveTests/Pods-UrmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAAA9E9B209EA0280035CDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C978D18B7C02FC2C0BCFF87 /* Pods_Urmove.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAA9EB2209EA03D0035CDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDD10E6795A6D3849CA9DA29 /* Pods_UrmoveTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAA9EBD209EA03D0035CDEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496C1EE5563E74EB92B2CAA9 /* Pods_UrmoveUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		091FEEDE3B6DA341C6B258FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83209CFE423DC87E0D93494D /* Pods-Urmove.debug.xcconfig */,
+				A519D0C2A8C2E5C08AE0F82C /* Pods-Urmove.release.xcconfig */,
+				E73F0C2A3DA6ECA424B9D371 /* Pods-UrmoveTests.debug.xcconfig */,
+				6A9057EB8868FD611A687F93 /* Pods-UrmoveTests.release.xcconfig */,
+				6F18F408598963C29A3E9AF2 /* Pods-UrmoveUITests.debug.xcconfig */,
+				94CB8590E2019CA1E15787F2 /* Pods-UrmoveUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		88431BD9E868DE6C2ACB198F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6ED54B4008D25E78FDDCC342 /* Pods_Urmove.framework */,
+				4CF755BB1466135E660FE565 /* Pods_UrmoveTests.framework */,
+				16BC29535837721C9C7C2B0E /* Pods_UrmoveUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAAA9E95209EA0280035CDEA = {
+			isa = PBXGroup;
+			children = (
+				AAAA9EA0209EA0280035CDEA /* Urmove */,
+				AAAA9EB8209EA03D0035CDEA /* UrmoveTests */,
+				AAAA9EC3209EA03D0035CDEA /* UrmoveUITests */,
+				AAAA9E9F209EA0280035CDEA /* Products */,
+				091FEEDE3B6DA341C6B258FB /* Pods */,
+				88431BD9E868DE6C2ACB198F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AAAA9E9F209EA0280035CDEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA9E9E209EA0280035CDEA /* Urmove.app */,
+				AAAA9EB5209EA03D0035CDEA /* UrmoveTests.xctest */,
+				AAAA9EC0209EA03D0035CDEA /* UrmoveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAAA9EA0209EA0280035CDEA /* Urmove */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA9ED6209F9CED0035CDEA /* objects */,
+				AAAA9EA1209EA0280035CDEA /* AppDelegate.swift */,
+				AAAA9EA3209EA0280035CDEA /* ViewController.swift */,
+				AAAA9ED2209EACC40035CDEA /* GoogleService-Info.plist */,
+				AAAA9EA5209EA0280035CDEA /* Main.storyboard */,
+				AAAA9EAB209EA03C0035CDEA /* Assets.xcassets */,
+				AAAA9EAD209EA03C0035CDEA /* LaunchScreen.storyboard */,
+				AAAA9EB0209EA03C0035CDEA /* Info.plist */,
+				AAAA9EA8209EA0280035CDEA /* Urmove.xcdatamodeld */,
+				AAAA9ED920A02F4D0035CDEA /* CustomerHomeViewController.swift */,
+				AAAA9EDD20A4E2C70035CDEA /* SignupViewController.swift */,
+				AADDBC2B20A7E05A00B14618 /* CarInfoViewController.swift */,
+				AA65C1E620B0C8890007553E /* PhoneVerificationViewController.swift */,
+			);
+			path = Urmove;
+			sourceTree = "<group>";
+		};
+		AAAA9EB8209EA03D0035CDEA /* UrmoveTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA9EB9209EA03D0035CDEA /* UrmoveTests.swift */,
+				AAAA9EBB209EA03D0035CDEA /* Info.plist */,
+			);
+			path = UrmoveTests;
+			sourceTree = "<group>";
+		};
+		AAAA9EC3209EA03D0035CDEA /* UrmoveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA9EC4209EA03D0035CDEA /* UrmoveUITests.swift */,
+				AAAA9EC6209EA03D0035CDEA /* Info.plist */,
+			);
+			path = UrmoveUITests;
+			sourceTree = "<group>";
+		};
+		AAAA9ED6209F9CED0035CDEA /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA9ED4209F9A1B0035CDEA /* driver.swift */,
+				AAAA9ED7209F9D600035CDEA /* customer.swift */,
+				AAAA9EDB20A0CF370035CDEA /* car.swift */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAAA9E9D209EA0280035CDEA /* Urmove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAAA9EC9209EA03D0035CDEA /* Build configuration list for PBXNativeTarget "Urmove" */;
+			buildPhases = (
+				EECAE58A252E79295470E4BE /* [CP] Check Pods Manifest.lock */,
+				AAAA9E9A209EA0280035CDEA /* Sources */,
+				AAAA9E9B209EA0280035CDEA /* Frameworks */,
+				AAAA9E9C209EA0280035CDEA /* Resources */,
+				FC554B84EAD5BF2898579B93 /* [CP] Embed Pods Frameworks */,
+				0505EAF079F34597A95A924A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Urmove;
+			productName = Urmove;
+			productReference = AAAA9E9E209EA0280035CDEA /* Urmove.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAAA9EB4209EA03D0035CDEA /* UrmoveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAAA9ECC209EA03D0035CDEA /* Build configuration list for PBXNativeTarget "UrmoveTests" */;
+			buildPhases = (
+				D79AC6084536A541A1F9B281 /* [CP] Check Pods Manifest.lock */,
+				AAAA9EB1209EA03D0035CDEA /* Sources */,
+				AAAA9EB2209EA03D0035CDEA /* Frameworks */,
+				AAAA9EB3209EA03D0035CDEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAAA9EB7209EA03D0035CDEA /* PBXTargetDependency */,
+			);
+			name = UrmoveTests;
+			productName = UrmoveTests;
+			productReference = AAAA9EB5209EA03D0035CDEA /* UrmoveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AAAA9EBF209EA03D0035CDEA /* UrmoveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAAA9ECF209EA03D0035CDEA /* Build configuration list for PBXNativeTarget "UrmoveUITests" */;
+			buildPhases = (
+				17B50BCEC825752F09D24921 /* [CP] Check Pods Manifest.lock */,
+				AAAA9EBC209EA03D0035CDEA /* Sources */,
+				AAAA9EBD209EA03D0035CDEA /* Frameworks */,
+				AAAA9EBE209EA03D0035CDEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AAAA9EC2209EA03D0035CDEA /* PBXTargetDependency */,
+			);
+			name = UrmoveUITests;
+			productName = UrmoveUITests;
+			productReference = AAAA9EC0209EA03D0035CDEA /* UrmoveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAAA9E96209EA0280035CDEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = ADNAP;
+				TargetAttributes = {
+					AAAA9E9D209EA0280035CDEA = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					AAAA9EB4209EA03D0035CDEA = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = AAAA9E9D209EA0280035CDEA;
+					};
+					AAAA9EBF209EA03D0035CDEA = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = AAAA9E9D209EA0280035CDEA;
+					};
+				};
+			};
+			buildConfigurationList = AAAA9E99209EA0280035CDEA /* Build configuration list for PBXProject "Urmove" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAAA9E95209EA0280035CDEA;
+			productRefGroup = AAAA9E9F209EA0280035CDEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAAA9E9D209EA0280035CDEA /* Urmove */,
+				AAAA9EB4209EA03D0035CDEA /* UrmoveTests */,
+				AAAA9EBF209EA03D0035CDEA /* UrmoveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAAA9E9C209EA0280035CDEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAAA9EAF209EA03C0035CDEA /* LaunchScreen.storyboard in Resources */,
+				AAAA9ED3209EACC40035CDEA /* GoogleService-Info.plist in Resources */,
+				AAAA9EAC209EA03C0035CDEA /* Assets.xcassets in Resources */,
+				AAAA9EA7209EA0280035CDEA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAA9EB3209EA03D0035CDEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAA9EBE209EA03D0035CDEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0505EAF079F34597A95A924A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Urmove/Pods-Urmove-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Urmove/Pods-Urmove-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17B50BCEC825752F09D24921 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UrmoveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D79AC6084536A541A1F9B281 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UrmoveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EECAE58A252E79295470E4BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Urmove-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC554B84EAD5BF2898579B93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Urmove/Pods-Urmove-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/EZAlertController/EZAlertController.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZAlertController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Urmove/Pods-Urmove-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAAA9E9A209EA0280035CDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAAA9EDA20A02F4E0035CDEA /* CustomerHomeViewController.swift in Sources */,
+				AAAA9EA4209EA0280035CDEA /* ViewController.swift in Sources */,
+				AAAA9EDE20A4E2C70035CDEA /* SignupViewController.swift in Sources */,
+				AADDBC2C20A7E05B00B14618 /* CarInfoViewController.swift in Sources */,
+				AAAA9EDC20A0CF370035CDEA /* car.swift in Sources */,
+				AAAA9ED8209F9D600035CDEA /* customer.swift in Sources */,
+				AA65C1E720B0C8890007553E /* PhoneVerificationViewController.swift in Sources */,
+				AAAA9EA2209EA0280035CDEA /* AppDelegate.swift in Sources */,
+				AAAA9EAA209EA0280035CDEA /* Urmove.xcdatamodeld in Sources */,
+				AAAA9ED5209F9A1B0035CDEA /* driver.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAA9EB1209EA03D0035CDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAAA9EBA209EA03D0035CDEA /* UrmoveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAA9EBC209EA03D0035CDEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAAA9EC5209EA03D0035CDEA /* UrmoveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AAAA9EB7209EA03D0035CDEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAAA9E9D209EA0280035CDEA /* Urmove */;
+			targetProxy = AAAA9EB6209EA03D0035CDEA /* PBXContainerItemProxy */;
+		};
+		AAAA9EC2209EA03D0035CDEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAAA9E9D209EA0280035CDEA /* Urmove */;
+			targetProxy = AAAA9EC1209EA03D0035CDEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAAA9EA5209EA0280035CDEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAAA9EA6209EA0280035CDEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAAA9EAD209EA03C0035CDEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAAA9EAE209EA03C0035CDEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAAA9EC7209EA03D0035CDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAAA9EC8209EA03D0035CDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAAA9ECA209EA03D0035CDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83209CFE423DC87E0D93494D /* Pods-Urmove.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WS35Y3E886;
+				INFOPLIST_FILE = Urmove/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.Urmove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAAA9ECB209EA03D0035CDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A519D0C2A8C2E5C08AE0F82C /* Pods-Urmove.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WS35Y3E886;
+				INFOPLIST_FILE = Urmove/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.Urmove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAAA9ECD209EA03D0035CDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E73F0C2A3DA6ECA424B9D371 /* Pods-UrmoveTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WS35Y3E886;
+				INFOPLIST_FILE = UrmoveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.UrmoveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Urmove.app/Urmove";
+			};
+			name = Debug;
+		};
+		AAAA9ECE209EA03D0035CDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A9057EB8868FD611A687F93 /* Pods-UrmoveTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WS35Y3E886;
+				INFOPLIST_FILE = UrmoveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.UrmoveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Urmove.app/Urmove";
+			};
+			name = Release;
+		};
+		AAAA9ED0209EA03D0035CDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F18F408598963C29A3E9AF2 /* Pods-UrmoveUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WS35Y3E886;
+				INFOPLIST_FILE = UrmoveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.UrmoveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Urmove;
+			};
+			name = Debug;
+		};
+		AAAA9ED1209EA03D0035CDEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94CB8590E2019CA1E15787F2 /* Pods-UrmoveUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WS35Y3E886;
+				INFOPLIST_FILE = UrmoveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.UrmoveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Urmove;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAAA9E99209EA0280035CDEA /* Build configuration list for PBXProject "Urmove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAA9EC7209EA03D0035CDEA /* Debug */,
+				AAAA9EC8209EA03D0035CDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAAA9EC9209EA03D0035CDEA /* Build configuration list for PBXNativeTarget "Urmove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAA9ECA209EA03D0035CDEA /* Debug */,
+				AAAA9ECB209EA03D0035CDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAAA9ECC209EA03D0035CDEA /* Build configuration list for PBXNativeTarget "UrmoveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAA9ECD209EA03D0035CDEA /* Debug */,
+				AAAA9ECE209EA03D0035CDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAAA9ECF209EA03D0035CDEA /* Build configuration list for PBXNativeTarget "UrmoveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAAA9ED0209EA03D0035CDEA /* Debug */,
+				AAAA9ED1209EA03D0035CDEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AAAA9EA8209EA0280035CDEA /* Urmove.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AAAA9EA9209EA0280035CDEA /* Urmove.xcdatamodel */,
+			);
+			currentVersion = AAAA9EA9209EA0280035CDEA /* Urmove.xcdatamodel */;
+			path = Urmove.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AAAA9E96209EA0280035CDEA /* Project object */;
+}
