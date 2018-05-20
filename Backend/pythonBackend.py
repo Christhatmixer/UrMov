@@ -1,10 +1,7 @@
 import stripe
-import sys
-import json
+
 from flask import Flask, render_template, request, jsonify
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
+
 from authy.api import AuthyApiClient
 
 
@@ -12,9 +9,11 @@ stripe.api_key = "sk_test_RPqKcpfyn4rsbQ25aPiODSQ2"
 
 app = Flask(__name__)
 
+#routes
 @app.route("/newSubscriber", methods=['GET', 'POST'])
 def subscribe():
     data = request.json
+    return "subscribed"
 
 
 
@@ -73,7 +72,8 @@ def checkCode():
         return "Authentication error."
 
 
-
+if __name__ == "__main__":
+    app.run()
 
 
 
