@@ -42,7 +42,7 @@ def buyGas():
 
     return "Gas order succeeded"
     
-@app.route("/sendVerificationCode", methods=['GET', 'POST'])
+@app.route("/requestVerificationCode", methods=['GET', 'POST'])
 def sendCode():
     authy_api = AuthyApiClient('8xpZf43L4paKxfL5ULKnNyFakUftTp0D')
     data = request.json
