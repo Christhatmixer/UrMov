@@ -26,6 +26,7 @@ target 'Urmove' do
   pod 'Alertift', '~> 3.0'
   # TEXT FIELDS
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'CBPinEntryView'
   target 'UrmoveTests' do
     inherit! :search_paths
     # Pods for testing

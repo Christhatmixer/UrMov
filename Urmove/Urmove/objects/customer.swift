@@ -13,8 +13,9 @@ class customer{
     var lastName: String?
     var email: String?
     var image: String?
-    
-    var car: car?
+    var phoneNumber: String?
+    var authenticated: Bool?
+    var carOne: car?
     
     
 }

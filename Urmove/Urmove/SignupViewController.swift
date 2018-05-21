@@ -79,23 +79,35 @@ class SignupViewController: UIViewController {
                     "email": email,
                     "userID": userID,
                     "firstName": self.firstNameTextField.text!,
-                    "lastName": self.lastNameTextField.text!
+                    "lastName": self.lastNameTextField.text!,
+                    "authenticated": false
                     
                     
                 ]
                 let updatedUser = customer()
                 self.userData.firstName = newUser["firstName"] as? String
+                self.userData.lastName = newUser["lastName"] as? String
                 self.userData.userID = newUser["userID"] as? String
+                self.userData.email = newUser["email"] as? String
+                self.userData.authenticated = newUser["authenticated"] as? Bool
     
                 
                 db.collection("users").document(userID).setData(newUser)
                 print("nothing here")
                 
-                self.performSegue(withIdentifier: "userInfo", sender: self
+                self.performSegue(withIdentifier: "carInfo", sender: self
                 )
             }
         }
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "carInfo"{
+            let vc = segue.destination as! CarInfoViewController
+            vc.userData = self.userData
+            
+            
+        }
     }
     
 

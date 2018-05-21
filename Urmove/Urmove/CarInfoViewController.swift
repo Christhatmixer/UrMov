@@ -7,8 +7,9 @@
 //
 
 import UIKit
-
+import Firebase
 class CarInfoViewController: UIViewController {
+    var userData = customer()
 
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var modelTextField: UITextField!
@@ -22,6 +23,37 @@ class CarInfoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func nextButtonAction(_ sender: Any) {
+        guard let color = colorTextField.text else{
+            print("no color entered")
+            
+            return
+        }
+        guard let model = modelTextField.text else{
+            print("No model entered")
+            
+            return
+        }
+        guard let make = makeTextField.text else{
+            print("Please confirm password")
+            
+            return
+        }
+        let carOne = ["color":color,"model":model,"make":make] as [String: Any]
+        let userCarCollection = Firestore.firestore().collection("users").document(userData.userID!).collection("cars")
+        userCarCollection.document("carOne").setData(carOne)
+        self.userData.carOne?.color = color
+        self.userData.carOne?.make = make
+        self.userData.carOne?.model = model
+        performSegue(withIdentifier: "phoneVerify", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "phoneVerify"{
+            let vc = segue.destination as! PhoneVerificationViewController
+            vc.userData = self.userData
+        }
     }
     
 
