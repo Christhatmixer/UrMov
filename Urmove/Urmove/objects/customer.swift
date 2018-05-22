@@ -15,7 +15,7 @@ class customer{
     var image: String?
     var phoneNumber: String?
     var authenticated: Bool?
-    var carOne: car?
+    var carList = [car]()
     
     
 }

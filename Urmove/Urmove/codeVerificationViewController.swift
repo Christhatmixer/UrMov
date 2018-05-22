@@ -47,6 +47,7 @@ class codeVerificationViewController: UIViewController {
                         print(error)
                     }else{
                         print("success")
+                        self.performSegue(withIdentifier: "customerHome", sender: self)
                     }
                 })
             }
@@ -54,6 +55,12 @@ class codeVerificationViewController: UIViewController {
             loadingIndicator.stopAnimating()
         }
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "customerHome"{
+            let vc = segue.destination as? CustomerHomeViewController
+            
+        }
     }
     
 

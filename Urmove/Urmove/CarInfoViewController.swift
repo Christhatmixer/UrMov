@@ -44,9 +44,12 @@ class CarInfoViewController: UIViewController {
         let carOne = ["color":color,"model":model,"make":make] as [String: Any]
         let userCarCollection = Firestore.firestore().collection("users").document(userData.userID!).collection("cars")
         userCarCollection.document("carOne").setData(carOne)
-        self.userData.carOne?.color = color
-        self.userData.carOne?.make = make
-        self.userData.carOne?.model = model
+        let newCar = car()
+        newCar.color = color
+        newCar.make = make
+        newCar.model = model
+        self.userData.carList.append(newCar)
+       
         performSegue(withIdentifier: "phoneVerify", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

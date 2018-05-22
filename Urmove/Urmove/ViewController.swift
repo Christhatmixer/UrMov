@@ -14,7 +14,7 @@ import Firebase
 import EZAlertController
 import Alertift
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
-    var userData: customer?
+    var userData = customer()
     var userAccount: Bool?
     var userCollection: CollectionReference!
     var userRef: DocumentReference!
@@ -99,12 +99,27 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 self.userAccount = true
                 let loggedInUserData = customer()
                 let dict = document.data()
-               
+                let email = dict!["email"] as? String
+                let firstName = dict!["firstName"] as? String
+                let lastName = dict!["lastName"] as? String
+                let authenticated = dict!["authenticated"] as? Bool
+                let phoneNumber = dict!["phoneNumber"] as? String
                 
-              
+                loggedInUserData.email = email
+                loggedInUserData.firstName = firstName
+                loggedInUserData.lastName = lastName
+                loggedInUserData.authenticated = authenticated
+                loggedInUserData.phoneNumber = phoneNumber
                 
                 
                 self.userData = loggedInUserData
+                self.getCars(userID: userID)
+                if self.userData.authenticated == false{
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "phoneVerification")
+                    let navigation = UINavigationController(rootViewController: vc!)
+                    self.present(navigation, animated: true, completion: nil)
+                }
+            
                 self.performSegue(withIdentifier: "authenticated", sender: self)
                 
             }else {
@@ -186,6 +201,27 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 
             }
             
+        }
+    }
+    func getCars(userID: String){
+        let userCarCollection = Firestore.firestore().collection("users").document(userID).collection("cars")
+        userCarCollection.getDocuments { (snapshot, error) in
+            if let error = error{
+                print(error)
+            }else{
+                for document in snapshot!.documents{
+                    let newCar = car()
+                    let dict = document.data()
+                    let model = dict["model"] as? String
+                    let make = dict["make"] as? String
+                    let color = dict["color"] as? String
+                    newCar.color = color
+                    newCar.make = make
+                    newCar.model = model
+                    self.userData.carList.append(newCar)
+                    
+                }
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KIo-CG-TF5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="How-qZ-oWi">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -67,11 +67,11 @@
             <objects>
                 <viewController storyboardIdentifier="carInfo" id="hK2-qn-E9d" customClass="CarInfoViewController" customModule="Urmove" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F0W-4j-QKu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-qy-noR">
-                                <rect key="frame" x="103.66666666666669" y="339" width="207" height="122"/>
+                                <rect key="frame" x="103.66666666666669" y="275" width="207" height="122"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Make" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOq-zP-sba">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
@@ -94,7 +94,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-gp-KMj">
-                                <rect key="frame" x="103.66666666666669" y="481" width="207" height="30"/>
+                                <rect key="frame" x="103.66666666666669" y="417" width="207" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,19 +129,19 @@
         <!--Phone Verification View Controller-->
         <scene sceneID="8Np-gm-7hb">
             <objects>
-                <viewController id="2OD-Al-jwx" customClass="PhoneVerificationViewController" customModule="Urmove" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="phoneVerification" id="2OD-Al-jwx" customClass="PhoneVerificationViewController" customModule="Urmove" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Orh-Hx-dkB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBX-4J-fdz">
-                                <rect key="frame" x="20.666666666666657" y="64.000000000000014" width="372.66666666666674" height="147.33333333333337"/>
+                                <rect key="frame" x="20.666666666666657" y="0.0" width="372.66666666666674" height="134.33333333333334"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="1" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDY-BG-4Be">
-                                <rect key="frame" x="82.666666666666671" y="267" width="248.66666666666663" height="40"/>
+                                <rect key="frame" x="82.666666666666671" y="190" width="248.66666666666663" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Get Code">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000000000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2o-BB-ld9">
-                                <rect key="frame" x="82.666666666666671" y="219" width="248.66666666666663" height="40"/>
+                                <rect key="frame" x="82.666666666666671" y="142" width="248.66666666666663" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="h0H-9y-eaN"/>
                                 </constraints>
@@ -247,6 +247,7 @@
                     </view>
                     <connections>
                         <outlet property="pinEntryView" destination="WN2-nx-i12" id="5Ur-VT-aRg"/>
+                        <segue destination="nxo-PF-6vw" kind="presentation" identifier="customerHome" modalPresentationStyle="overCurrentContext" id="5xB-cz-vSX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blu-qp-tAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,7 +257,7 @@
         <!--Customer Home View Controller-->
         <scene sceneID="6AC-Nu-U01">
             <objects>
-                <viewController id="KIo-CG-TF5" customClass="CustomerHomeViewController" customModule="Urmove" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customerHome" id="KIo-CG-TF5" customClass="CustomerHomeViewController" customModule="Urmove" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wNu-ub-fqz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,13 +276,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7eh-Eu-JSm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Qs1-Ih-8Yv"/>
                     <connections>
                         <outlet property="mapView" destination="Ffx-h7-dy5" id="3xQ-32-prI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xxg-zU-E0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5276.811594202899" y="-644.02173913043487"/>
+            <point key="canvasLocation" x="6384.057971014493" y="-629.34782608695662"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YW2-1M-K1A">
@@ -332,7 +334,7 @@
         <!--View Controller-->
         <scene sceneID="Ezh-yR-iBd">
             <objects>
-                <viewController id="How-qZ-oWi" sceneMemberID="viewController">
+                <viewController id="How-qZ-oWi" customClass="ViewController" customModule="Urmove" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8C7-Nu-1rZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,13 +349,13 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xad-C0-Ov8">
                                         <rect key="frame" x="0.0" y="55" width="290" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5E-ni-GhO">
                                         <rect key="frame" x="0.0" y="110" width="290" height="40"/>
@@ -361,6 +363,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInFunc:" destination="How-qZ-oWi" eventType="touchUpInside" id="dfZ-Xt-wdv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -393,7 +398,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3fv-ls-Fyw" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="87" y="508" width="240" height="128"/>
+                                <rect key="frame" x="87" y="508" width="240" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -408,21 +413,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p3T-N1-Z2b"/>
                     </view>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="3fv-ls-Fyw" id="WE1-Gf-a7O"/>
+                        <outlet property="passwordTextField" destination="xad-C0-Ov8" id="tbS-fv-OCp"/>
+                        <outlet property="usernameTextField" destination="0iS-WN-fyq" id="0ef-kj-lHU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nD6-M1-khV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="-588"/>
+            <point key="canvasLocation" x="340.57971014492756" y="-588.58695652173913"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="PQi-F4-aF5">
             <objects>
                 <viewController id="HbL-J4-aIm" customClass="SignupViewController" customModule="Urmove" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z7n-Xh-wCL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-Mf-Og1">
-                                <rect key="frame" x="62" y="252.66666666666663" width="290" height="295"/>
+                                <rect key="frame" x="62" y="188.66666666666663" width="290" height="295"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S39-GN-eXn">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="40"/>
@@ -497,9 +507,17 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Jh-8L-EME" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Irn-7i-agg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Irn-7i-agg">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -509,6 +527,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XO-Ht-NzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1147.8260869565217" y="-589.4021739130435"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vAR-wy-v6b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nxo-PF-6vw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="55P-8J-pw2">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KIo-CG-TF5" kind="relationship" relationship="rootViewController" id="wnR-UH-rRe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGC-X7-MOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5476.811594202899" y="-629.34782608695662"/>
         </scene>
     </scenes>
 </document>
