@@ -25,6 +25,7 @@
 		AAAA9EDC20A0CF370035CDEA /* car.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EDB20A0CF370035CDEA /* car.swift */; };
 		AAAA9EDE20A4E2C70035CDEA /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EDD20A4E2C70035CDEA /* SignupViewController.swift */; };
 		AAB0123E20B21AB500CF90B5 /* codeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0123D20B21AB400CF90B5 /* codeVerificationViewController.swift */; };
+		AAB0124120B2B52500CF90B5 /* customerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0124020B2B52500CF90B5 /* customerMapViewController.swift */; };
 		AADDBC2C20A7E05B00B14618 /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADDBC2B20A7E05A00B14618 /* CarInfoViewController.swift */; };
 		BDD10E6795A6D3849CA9DA29 /* Pods_UrmoveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF755BB1466135E660FE565 /* Pods_UrmoveTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		AAAA9EDB20A0CF370035CDEA /* car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = car.swift; sourceTree = "<group>"; };
 		AAAA9EDD20A4E2C70035CDEA /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		AAB0123D20B21AB400CF90B5 /* codeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeVerificationViewController.swift; sourceTree = "<group>"; };
+		AAB0124020B2B52500CF90B5 /* customerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customerMapViewController.swift; sourceTree = "<group>"; };
 		AADDBC2B20A7E05A00B14618 /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
 		E73F0C2A3DA6ECA424B9D371 /* Pods-UrmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrmoveTests/Pods-UrmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 		AAAA9EA0209EA0280035CDEA /* Urmove */ = {
 			isa = PBXGroup;
 			children = (
+				AAB0123F20B2B29800CF90B5 /* map */,
 				AAAA9ED6209F9CED0035CDEA /* objects */,
 				AAAA9EA1209EA0280035CDEA /* AppDelegate.swift */,
 				AAAA9EA3209EA0280035CDEA /* ViewController.swift */,
@@ -201,6 +204,14 @@
 				AAAA9EDB20A0CF370035CDEA /* car.swift */,
 			);
 			path = objects;
+			sourceTree = "<group>";
+		};
+		AAB0123F20B2B29800CF90B5 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				AAB0124020B2B52500CF90B5 /* customerMapViewController.swift */,
+			);
+			path = map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +497,7 @@
 				AAAA9ED8209F9D600035CDEA /* customer.swift in Sources */,
 				AA65C1E720B0C8890007553E /* PhoneVerificationViewController.swift in Sources */,
 				AAAA9EA2209EA0280035CDEA /* AppDelegate.swift in Sources */,
+				AAB0124120B2B52500CF90B5 /* customerMapViewController.swift in Sources */,
 				AAAA9EAA209EA0280035CDEA /* Urmove.xcdatamodeld in Sources */,
 				AAAA9ED5209F9A1B0035CDEA /* driver.swift in Sources */,
 			);
