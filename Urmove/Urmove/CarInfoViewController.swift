@@ -14,6 +14,8 @@ class CarInfoViewController: UIViewController {
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var modelTextField: UITextField!
     @IBOutlet weak var makeTextField: UITextField!
+    @IBOutlet weak var tagTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,13 +43,19 @@ class CarInfoViewController: UIViewController {
             
             return
         }
-        let carOne = ["color":color,"model":model,"make":make] as [String: Any]
+        guard let tag = tagTextField.text else{
+            print("Please confirm password")
+            
+            return
+        }
+        let carOne = ["color":color,"model":model,"make":make,"tag":tag] as [String: Any]
         let userCarCollection = Firestore.firestore().collection("users").document(userData.userID!).collection("cars")
         userCarCollection.document("carOne").setData(carOne)
         let newCar = car()
         newCar.color = color
         newCar.make = make
         newCar.model = model
+        newCar.tag = tag
         self.userData.carList.append(newCar)
        
         performSegue(withIdentifier: "phoneVerify", sender: self)

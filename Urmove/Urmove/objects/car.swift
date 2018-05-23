@@ -12,5 +12,6 @@ class car{
     var model: String?
     var year: String?
     var color: String?
+    var tag: String?
     
 }

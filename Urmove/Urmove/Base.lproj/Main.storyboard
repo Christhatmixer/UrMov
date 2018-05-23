@@ -71,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-qy-noR">
-                                <rect key="frame" x="103.66666666666669" y="275" width="207" height="122"/>
+                                <rect key="frame" x="103.66666666666669" y="252" width="207" height="168"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Make" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOq-zP-sba">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
@@ -91,10 +91,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tag" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4FU-XB-0sz">
+                                        <rect key="frame" x="0.0" y="138" width="207" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-gp-KMj">
-                                <rect key="frame" x="103.66666666666669" y="417" width="207" height="30"/>
+                                <rect key="frame" x="103.66666666666669" y="440" width="207" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,6 +125,7 @@
                         <outlet property="colorTextField" destination="5Sw-LA-P0q" id="3Ys-G8-qEk"/>
                         <outlet property="makeTextField" destination="HOq-zP-sba" id="Z91-yt-qiR"/>
                         <outlet property="modelTextField" destination="g0d-Aa-baC" id="y54-yb-8g7"/>
+                        <outlet property="tagTextField" destination="4FU-XB-0sz" id="XAb-b9-fos"/>
                         <segue destination="2OD-Al-jwx" kind="show" identifier="phoneVerify" id="SZP-ug-3Zp"/>
                     </connections>
                 </viewController>
@@ -501,6 +508,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFZ-Vn-B82" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2055.072463768116" y="-589.4021739130435"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nbB-DY-ddB">
+            <objects>
+                <viewController id="956-ni-PuU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KRX-c6-Caj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeF-2A-n5t">
+                                <rect key="frame" x="0.0" y="19.999999999999986" width="414" height="220.66666666666663"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eha-1n-P4M">
+                                        <rect key="frame" x="8" y="60.333333333333329" width="100" height="99.999999999999986"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="7h3-oi-aqa"/>
+                                            <constraint firstAttribute="height" constant="100" id="KhZ-LG-koG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9R-cL-Kdy">
+                                        <rect key="frame" x="116" y="100" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="C9R-cL-Kdy" firstAttribute="leading" secondItem="eha-1n-P4M" secondAttribute="trailing" constant="8" id="3wZ-YS-thv"/>
+                                    <constraint firstItem="eha-1n-P4M" firstAttribute="leading" secondItem="BeF-2A-n5t" secondAttribute="leading" constant="8" id="A2v-jQ-nnC"/>
+                                    <constraint firstItem="C9R-cL-Kdy" firstAttribute="centerY" secondItem="BeF-2A-n5t" secondAttribute="centerY" id="R8N-9o-eOg"/>
+                                    <constraint firstItem="eha-1n-P4M" firstAttribute="centerY" secondItem="BeF-2A-n5t" secondAttribute="centerY" id="dnE-1E-fsJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BeF-2A-n5t" firstAttribute="centerX" secondItem="Ld9-S7-MVp" secondAttribute="centerX" id="GST-nC-u8U"/>
+                            <constraint firstItem="BeF-2A-n5t" firstAttribute="top" secondItem="Ld9-S7-MVp" secondAttribute="top" id="Gdi-UF-h7f"/>
+                            <constraint firstItem="BeF-2A-n5t" firstAttribute="width" secondItem="KRX-c6-Caj" secondAttribute="width" id="hGP-Ex-6TE"/>
+                            <constraint firstItem="BeF-2A-n5t" firstAttribute="height" secondItem="KRX-c6-Caj" secondAttribute="height" multiplier="0.3" id="w5Y-m7-hKB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ld9-S7-MVp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJq-pE-GRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1559" y="-1382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qk0-Ap-LRM">
