@@ -13,5 +13,6 @@ class car{
     var year: String?
     var color: String?
     var tag: String?
+    var fuelCapacity: Double?
     
 }

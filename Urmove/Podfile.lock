@@ -94,6 +94,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.15)
   - IQKeyboardManagerSwift (6.0.2)
   - leveldb-library (1.20)
+  - MSCircularSlider (1.2.1)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -103,7 +104,9 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.2.0)
   - NVActivityIndicatorView/Presenter (4.2.0)
   - Protobuf (3.5.0)
+  - SJFluidSegmentedControl (1.1.2)
   - SkyFloatingLabelTextField (3.4.1)
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -117,8 +120,11 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - IQKeyboardManagerSwift
+  - MSCircularSlider
   - NVActivityIndicatorView
+  - SJFluidSegmentedControl (from `https://github.com/adornoventura/SJFluidSegmentedControl.git`)
   - SkyFloatingLabelTextField (~> 3.0)
+  - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -148,10 +154,21 @@ SPEC REPOS:
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - leveldb-library
+    - MSCircularSlider
     - nanopb
     - NVActivityIndicatorView
     - Protobuf
     - SkyFloatingLabelTextField
+    - SnapKit
+
+EXTERNAL SOURCES:
+  SJFluidSegmentedControl:
+    :git: https://github.com/adornoventura/SJFluidSegmentedControl.git
+
+CHECKOUT OPTIONS:
+  SJFluidSegmentedControl:
+    :commit: f247c43766e9ec67c36174e8669fef7d8b9c7086
+    :git: https://github.com/adornoventura/SJFluidSegmentedControl.git
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -180,11 +197,14 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   IQKeyboardManagerSwift: 59d4b0e140bc546c3c76ae5bb35b3dafd10b8172
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  MSCircularSlider: e0107e17c0c756c4e6a7d4d6c157a474ac08f7ca
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  SJFluidSegmentedControl: 75ca518e35fd27afd1e648bdc275110e8dfbc651
   SkyFloatingLabelTextField: 8085f20f57f74a00cfcae58099299faa1a971035
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 39811b9ee2c363607b63c4e94c3ddea48ad27410
+PODFILE CHECKSUM: a62365db76e9e8fe8d9962b562442de4e72fa6ed
 
 COCOAPODS: 1.5.0

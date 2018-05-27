@@ -6,6 +6,8 @@ target 'Urmove' do
   use_frameworks!
 
   # Pods for Urmove
+  # Layouts
+  pod 'SnapKit', '~> 4.0.0'
   #KEYBOARD
   pod 'IQKeyboardManagerSwift'
   #FACEBOOK
@@ -21,6 +23,10 @@ target 'Urmove' do
   # Google
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  # SLIDER
+  pod 'MSCircularSlider'
+  # Segment
+  pod 'SJFluidSegmentedControl', :git => 'https://github.com/adornoventura/SJFluidSegmentedControl.git'
   # ALERTS
   pod 'EZAlertController', '3.2'
   pod 'Alertift', '~> 3.0'
