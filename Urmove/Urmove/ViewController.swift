@@ -104,13 +104,14 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 let lastName = dict!["lastName"] as? String
                 let authenticated = dict!["authenticated"] as? Bool
                 let phoneNumber = dict!["phoneNumber"] as? String
+                let userID = dict!["userID"] as? String
                 
                 self.userData.email = email
                 self.userData.firstName = firstName
                 self.userData.lastName = lastName
                 self.userData.authenticated = authenticated
                 self.userData.phoneNumber = phoneNumber
-                
+                self.userData.userID = userID
                 
                 
                 
@@ -121,7 +122,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 }else{
                     
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "gasSelection") as! GasOrderViewController
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "carSelection") as! CarSelectionViewController
                     vc.userData = self.userData
                     let navigation = UINavigationController(rootViewController: vc)
                     self.present(navigation, animated: true, completion: nil)
@@ -222,14 +223,17 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     let newCar = car()
                     let dict = document.data()
                     let model = dict["model"] as? String
-                    print(model)
+                    let year = dict["year"] as? String
                     let make = dict["make"] as? String
                     let color = dict["color"] as? String
                     let tag = dict["tag"] as? String
+                    let fuelCapacity = dict["fuelCapacity"] as? Double
                     newCar.color = color
                     newCar.make = make
                     newCar.model = model
                     newCar.tag = tag
+                    newCar.year = year
+                    newCar.fuelCapacity = fuelCapacity
                     self.userData.carList.append(newCar)
                     
                 }

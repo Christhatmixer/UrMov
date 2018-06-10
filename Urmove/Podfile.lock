@@ -14,6 +14,7 @@ PODS:
     - BoringSSL/Interface (= 10.0.2)
   - BoringSSL/Interface (10.0.2)
   - CBPinEntryView (1.5.3)
+  - CenteredCollectionView (2.0.0)
   - EZAlertController (3.2)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
@@ -36,6 +37,9 @@ PODS:
   - Firebase/Firestore (4.13.0):
     - Firebase/Core
     - FirebaseFirestore (= 0.11.0)
+  - Firebase/Storage (4.13.0):
+    - Firebase/Core
+    - FirebaseStorage (= 2.2.0)
   - FirebaseAnalytics (4.2.0):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
@@ -55,6 +59,13 @@ PODS:
     - Protobuf (~> 3.5)
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
+  - FirebaseStorage (2.2.0):
+    - FirebaseAnalytics (~> 4.1)
+    - FirebaseCore (~> 4.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseUI/Storage (4.5.5):
+    - Firebase/Storage (~> 4.0)
+    - SDWebImage (~> 4.0)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
   - GoogleMaps/Base (2.7.0)
@@ -104,6 +115,9 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.2.0)
   - NVActivityIndicatorView/Presenter (4.2.0)
   - Protobuf (3.5.0)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
   - SJFluidSegmentedControl (1.1.2)
   - SkyFloatingLabelTextField (3.4.1)
   - SnapKit (4.0.0)
@@ -112,11 +126,13 @@ DEPENDENCIES:
   - Alamofire
   - Alertift (~> 3.0)
   - CBPinEntryView
+  - CenteredCollectionView
   - EZAlertController (= 3.2)
   - FacebookLogin
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
+  - FirebaseUI/Storage
   - GoogleMaps
   - GooglePlaces
   - IQKeyboardManagerSwift
@@ -133,6 +149,7 @@ SPEC REPOS:
     - Bolts
     - BoringSSL
     - CBPinEntryView
+    - CenteredCollectionView
     - EZAlertController
     - FacebookCore
     - FacebookLogin
@@ -144,6 +161,8 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseFirestore
     - FirebaseInstanceID
+    - FirebaseStorage
+    - FirebaseUI
     - GoogleMaps
     - GooglePlaces
     - GoogleToolboxForMac
@@ -158,6 +177,7 @@ SPEC REPOS:
     - nanopb
     - NVActivityIndicatorView
     - Protobuf
+    - SDWebImage
     - SkyFloatingLabelTextField
     - SnapKit
 
@@ -176,6 +196,7 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
   CBPinEntryView: a9fa8969f97b3ff0001d26bb770684270df7bcb8
+  CenteredCollectionView: 6548b515645aea6ea89618f4b5ca090191dc8628
   EZAlertController: 633be01320bed47720be54054df47667d61c2481
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
@@ -187,6 +208,8 @@ SPEC CHECKSUMS:
   FirebaseCore: 90cb1c53d69b556f112a1bf72b5fcfaad7650790
   FirebaseFirestore: e92a096ce80c7b4b905d4e9d41dbd944adc9d2a5
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FirebaseStorage: 0c223481c8f89ed300cf1239ddd2d9833622c65f
+  FirebaseUI: 7f149d40db1a67c459df16540256b66d8f8e8c70
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
@@ -201,10 +224,11 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SJFluidSegmentedControl: 75ca518e35fd27afd1e648bdc275110e8dfbc651
   SkyFloatingLabelTextField: 8085f20f57f74a00cfcae58099299faa1a971035
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: a62365db76e9e8fe8d9962b562442de4e72fa6ed
+PODFILE CHECKSUM: a2107ba217559a30f48f7fb211a0087a99eec6ac
 
 COCOAPODS: 1.5.0

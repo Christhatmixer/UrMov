@@ -8,6 +8,7 @@
 
 import Foundation
 class car{
+    var carImage: String?
     var make: String?
     var model: String?
     var year: String?

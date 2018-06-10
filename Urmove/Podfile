@@ -8,6 +8,7 @@ target 'Urmove' do
   # Pods for Urmove
   # Layouts
   pod 'SnapKit', '~> 4.0.0'
+  pod 'CenteredCollectionView'
   #KEYBOARD
   pod 'IQKeyboardManagerSwift'
   #FACEBOOK
@@ -18,6 +19,7 @@ target 'Urmove' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'FirebaseUI/Storage'
   # Activity
   pod 'NVActivityIndicatorView'
   # Google

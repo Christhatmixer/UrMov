@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		496C1EE5563E74EB92B2CAA9 /* Pods_UrmoveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BC29535837721C9C7C2B0E /* Pods_UrmoveUITests.framework */; };
 		8C978D18B7C02FC2C0BCFF87 /* Pods_Urmove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ED54B4008D25E78FDDCC342 /* Pods_Urmove.framework */; };
+		AA2F166F20BCE4B800F4A6F6 /* CarSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F166E20BCE4B800F4A6F6 /* CarSelectionViewController.swift */; };
 		AA55CFEF20B680FB00D7BA0F /* gasRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CFEE20B680FB00D7BA0F /* gasRequest.swift */; };
 		AA55CFF120B69AB200D7BA0F /* GasOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CFF020B69AB200D7BA0F /* GasOrderViewController.swift */; };
 		AA55CFF320B75F0400D7BA0F /* CarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CFF220B75F0400D7BA0F /* CarCollectionViewCell.swift */; };
@@ -59,6 +60,7 @@
 		83209CFE423DC87E0D93494D /* Pods-Urmove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Urmove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Urmove/Pods-Urmove.debug.xcconfig"; sourceTree = "<group>"; };
 		94CB8590E2019CA1E15787F2 /* Pods-UrmoveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrmoveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UrmoveUITests/Pods-UrmoveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A519D0C2A8C2E5C08AE0F82C /* Pods-Urmove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Urmove.release.xcconfig"; path = "Pods/Target Support Files/Pods-Urmove/Pods-Urmove.release.xcconfig"; sourceTree = "<group>"; };
+		AA2F166E20BCE4B800F4A6F6 /* CarSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSelectionViewController.swift; sourceTree = "<group>"; };
 		AA55CFEE20B680FB00D7BA0F /* gasRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gasRequest.swift; sourceTree = "<group>"; };
 		AA55CFF020B69AB200D7BA0F /* GasOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasOrderViewController.swift; sourceTree = "<group>"; };
 		AA55CFF220B75F0400D7BA0F /* CarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				AAB0123D20B21AB400CF90B5 /* codeVerificationViewController.swift */,
 				AA55CFF020B69AB200D7BA0F /* GasOrderViewController.swift */,
 				AA55CFF220B75F0400D7BA0F /* CarCollectionViewCell.swift */,
+				AA2F166E20BCE4B800F4A6F6 /* CarSelectionViewController.swift */,
 			);
 			path = Urmove;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/CBPinEntryView/CBPinEntryView.framework",
+				"${BUILT_PRODUCTS_DIR}/CenteredCollectionView/CenteredCollectionView.framework",
 				"${BUILT_PRODUCTS_DIR}/EZAlertController/EZAlertController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -453,6 +457,7 @@
 				"${BUILT_PRODUCTS_DIR}/MSCircularSlider/MSCircularSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SJFluidSegmentedControl/SJFluidSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -470,6 +475,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CBPinEntryView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CenteredCollectionView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZAlertController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -481,6 +487,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MSCircularSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJFluidSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -515,6 +522,7 @@
 				AA65C1E720B0C8890007553E /* PhoneVerificationViewController.swift in Sources */,
 				AAAA9EA2209EA0280035CDEA /* AppDelegate.swift in Sources */,
 				AAB0124120B2B52500CF90B5 /* customerMapViewController.swift in Sources */,
+				AA2F166F20BCE4B800F4A6F6 /* CarSelectionViewController.swift in Sources */,
 				AA55CFF120B69AB200D7BA0F /* GasOrderViewController.swift in Sources */,
 				AAAA9EAA209EA0280035CDEA /* Urmove.xcdatamodeld in Sources */,
 				AAAA9ED5209F9A1B0035CDEA /* driver.swift in Sources */,
