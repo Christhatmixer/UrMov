@@ -10,21 +10,27 @@ import UIKit
 import Firebase
 import MSCircularSlider
 import SJFluidSegmentedControl
-class GasOrderViewController: UIViewController, SJFluidSegmentedControlDataSource {
+class GasOrderViewController: UIViewController, SJFluidSegmentedControlDataSource, MSDoubleHandleCircularSliderDelegate {
+    
+    
    
     var octaneList = ["87","90","93"]
     var userData = customer()
     var selectedCar = car()
-    
+    var gasPrice = 2.88
+    var gasNeeded: Double?
+    var newGasRequest = gasRequest()
    
     @IBOutlet weak var octaneSegmentView: SJFluidSegmentedControl!
     @IBOutlet weak var ninetyThreeView: UIView!
     @IBOutlet weak var ninetyView: UIView!
     @IBOutlet weak var eightySevenView: UIView!
     @IBOutlet weak var fuelSlider: MSCircularSlider!
-   
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fuelSlider.delegate = self
         fuelSlider.labelFont = .systemFont(ofSize: 25.0)
         octaneSegmentView.dataSource = self
         octaneSegmentView.textFont = .systemFont(ofSize: 25)
@@ -37,12 +43,14 @@ class GasOrderViewController: UIViewController, SJFluidSegmentedControlDataSourc
     @IBAction func orderGas(_ sender: Any) {
         let octane = octaneList[octaneSegmentView.currentSegment]
         let gasNeeded = (fuelSlider._maximumValue/100.0 - fuelSlider._minimumValue/100.0) * selectedCar.fuelCapacity!
+        
         let newGasRequest = gasRequest()
         newGasRequest.gasAmount = Double(gasNeeded)
         newGasRequest.car = self.selectedCar
+        newGasRequest.octane = octaneList[octaneSegmentView.currentSegment]
         let vc = storyboard?.instantiateViewController(withIdentifier: "customerHome") as! CustomerHomeViewController
-        
-        
+        vc.newGasRequest = self.newGasRequest
+        self.navigationController?.pushViewController(vc, animated: true)
         
         
     }
@@ -52,7 +60,33 @@ class GasOrderViewController: UIViewController, SJFluidSegmentedControlDataSourc
     func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, titleForSegmentAtIndex index: Int) -> String? {
         return octaneList[index]
     }
+    func circularSlider(_ slider: MSCircularSlider, endedTrackingWith firstValue: Double, secondValue: Double, isFirstHandle: Bool) {
+        
+        print(firstValue)
+    }
+    func circularSlider(_ slider: MSCircularSlider, startedTrackingWith firstValue: Double, secondValue: Double, isFirstHandle: Bool) {
+        print(firstValue)
+        /*
+        let gasNeeded = (secondValue/100.0 - firstValue/100.0) * 8
+        var price = gasNeeded * 2.88
+        priceLabel.text = String(price)
+ */
+    }
+    func circularSlider(_ slider: MSCircularSlider, valueChangedTo firstValue: Double, secondValue: Double, isFirstHandle: Bool?, fromUser: Bool) {
+        
+        print(firstValue)
+        print(secondValue)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        let gasNeeded = (secondValue/100.0 - firstValue/100.0) * 8
+        var price = gasNeeded * 2.88
+        priceLabel.text = numberFormatter.string(from: price as NSNumber)
+    }
+    
 
+    @IBAction func fuelSliderValueChanged(_ sender: Any) {
+        print("touched")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

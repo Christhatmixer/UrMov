@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyALoLhshrdNCqCEmOZvD-SfMmmMH7VVGe8")
         GMSPlacesClient.provideAPIKey("AIzaSyALoLhshrdNCqCEmOZvD-SfMmmMH7VVGe8")
         IQKeyboardManager.shared.enable = true
-        var navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.tintColor = UIColor.init(red: 255.0, green: 174.0, blue: 66.0, alpha: 1.0)
+        //var navigationBarAppearance = UINavigationBar.appearance()
+        //navigationBarAppearance.tintColor = UIColor.init(red: 255.0, green: 174.0, blue: 66.0, alpha: 1.0)
         
         return true
     }

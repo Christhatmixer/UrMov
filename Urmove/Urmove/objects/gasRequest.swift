@@ -13,5 +13,6 @@ class gasRequest{
     var latitude: Double?
     var longitude: Double?
     var gasAmount: Double?
+    var price: Double?
     
 }

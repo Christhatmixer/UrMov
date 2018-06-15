@@ -31,6 +31,7 @@
 		AAB0123E20B21AB500CF90B5 /* codeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0123D20B21AB400CF90B5 /* codeVerificationViewController.swift */; };
 		AAB0124120B2B52500CF90B5 /* customerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB0124020B2B52500CF90B5 /* customerMapViewController.swift */; };
 		AADDBC2C20A7E05B00B14618 /* CarInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADDBC2B20A7E05A00B14618 /* CarInfoViewController.swift */; };
+		AADEEB0520D3A17E000FFE85 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = AADEEB0420D3A17E000FFE85 /* style.json */; };
 		BDD10E6795A6D3849CA9DA29 /* Pods_UrmoveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF755BB1466135E660FE565 /* Pods_UrmoveTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		AAB0123D20B21AB400CF90B5 /* codeVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeVerificationViewController.swift; sourceTree = "<group>"; };
 		AAB0124020B2B52500CF90B5 /* customerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customerMapViewController.swift; sourceTree = "<group>"; };
 		AADDBC2B20A7E05A00B14618 /* CarInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoViewController.swift; sourceTree = "<group>"; };
+		AADEEB0420D3A17E000FFE85 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		E73F0C2A3DA6ECA424B9D371 /* Pods-UrmoveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrmoveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UrmoveTests/Pods-UrmoveTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 				AA55CFF020B69AB200D7BA0F /* GasOrderViewController.swift */,
 				AA55CFF220B75F0400D7BA0F /* CarCollectionViewCell.swift */,
 				AA2F166E20BCE4B800F4A6F6 /* CarSelectionViewController.swift */,
+				AADEEB0420D3A17E000FFE85 /* style.json */,
 			);
 			path = Urmove;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				AAAA9EAF209EA03C0035CDEA /* LaunchScreen.storyboard in Resources */,
 				AAAA9ED3209EACC40035CDEA /* GoogleService-Info.plist in Resources */,
 				AAAA9EAC209EA03C0035CDEA /* Assets.xcassets in Resources */,
+				AADEEB0520D3A17E000FFE85 /* style.json in Resources */,
 				AAAA9EA7209EA0280035CDEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,7 +706,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WS35Y3E886;
 				INFOPLIST_FILE = Urmove/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.Urmove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -718,7 +725,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WS35Y3E886;
 				INFOPLIST_FILE = Urmove/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.Urmove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -735,7 +745,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WS35Y3E886;
 				INFOPLIST_FILE = UrmoveTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.UrmoveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -753,7 +767,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WS35Y3E886;
 				INFOPLIST_FILE = UrmoveTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.UrmoveTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -770,7 +788,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WS35Y3E886;
 				INFOPLIST_FILE = UrmoveUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.UrmoveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -787,7 +809,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WS35Y3E886;
 				INFOPLIST_FILE = UrmoveUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ADNAP.UrmoveUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

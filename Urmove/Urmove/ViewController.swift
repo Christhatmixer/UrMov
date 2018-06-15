@@ -50,39 +50,43 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             if (document?.exists)!{
                 self.userAccount = true
                 let loggedInUserData = customer()
-                let postDict = document?.data()
-                let displayName = postDict!["displayName"] as? String?
-                let userID = postDict!["userID"] as? String?
-                let userName = postDict!["userName"] as? String?
-                //referrals
                 
+                let dict = document?.data()
+                let email = dict!["email"] as? String
+                let firstName = dict!["firstName"] as? String
+                let lastName = dict!["lastName"] as? String
+                let authenticated = dict!["authenticated"] as? Bool
+                let phoneNumber = dict!["phoneNumber"] as? String
+                let userID = dict!["userID"] as? String
                 
+                self.userData.email = email
+                self.userData.firstName = firstName
+                self.userData.lastName = lastName
+                self.userData.authenticated = authenticated
+                self.userData.phoneNumber = phoneNumber
+                self.userData.userID = userID
+                
+                if self.userData.authenticated == false{
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "phoneVerification")
+                    let navigation = UINavigationController(rootViewController: vc!)
+                    self.present(navigation, animated: true, completion: nil)
+                }else{
+                    
+                    
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "carSelection") as! CarSelectionViewController
+                    vc.userData = self.userData
+                    self.present(vc, animated: true, completion: nil)
+                    //let navigation = UINavigationController(rootViewController: vc)
+                    //self.present(navigation, animated: true, completion: nil)
+                    
+                }
                 
                 self.performSegue(withIdentifier: "authenticated", sender: self)
-                print(postDict!["name"]) as? String
+                
             }else{
                 self.userAccount = false
                 print("aint shit here")
-                EZAlertController.alert("EULA", message: "By signing in using a social media account you agree to Apple's EULA and ADNAP's EULA. By Signing in you have the ability to participate in event specific chat rooms and our general chat rooms. We do not allow offensive or abusive messages. If you see any offensive or abusive messages, use our contact to form to report them and we will take action accordingly", buttons: ["Accept", "Decline"]) {(alertAction, position) -> Void in
-                    if position == 0 {
-                        print("Accepted")
-                        let newUser = ["userName": userName,
-                                       "userID":userID,
-                                       "displayName":displayName,
-                                       "blockList": [Any]()
-                            
-                            ] as [String : Any]
-                        self.userRef.setData(newUser)
-                        let loggedInUserData = customer()
-                    
-                        self.userData = loggedInUserData
-                        self.performSegue(withIdentifier: "authenticated", sender: self)
-                        
-                    }else if position == 1 {
-                        print("Cencelled")
-                        FBSDKLoginManager().logOut()
-                    }
-                }
+              
             }
             
         }
@@ -125,7 +129,13 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "carSelection") as! CarSelectionViewController
                     vc.userData = self.userData
                     let navigation = UINavigationController(rootViewController: vc)
+                    navigation.navigationBar.isTranslucent = false
+                    navigation.navigationBar.barTintColor = UIColor(displayP3Red: 40.0/250, green: 39.0/250, blue: 46.0/250, alpha: 1.0)
+                    navigation.navigationBar.tintColor = UIColor(displayP3Red: 242.0/250, green: 57.0/250, blue: 45.0/250, alpha: 1.0)
+                    navigation.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                    navigation.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
                     self.present(navigation, animated: true, completion: nil)
+                    
                     
                 }
             
