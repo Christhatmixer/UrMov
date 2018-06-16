@@ -21,8 +21,10 @@ class CustomerHomeViewController: UIViewController,CLLocationManagerDelegate,GMS
     var resultView: UITextView?
     var newGasRequest = gasRequest()
     let marker = GMSMarker()
-  
+    let geoCoder = GMSGeocoder()
     @IBOutlet weak var mapView: GMSMapView!
+    
+    @IBOutlet weak var addressLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,6 +77,15 @@ class CustomerHomeViewController: UIViewController,CLLocationManagerDelegate,GMS
     }
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         marker.position = position.target
+        geoCoder.reverseGeocodeCoordinate(marker.position) { (response, error) in
+            if let error = error{
+                print(error)
+            }else{
+                print(response?.firstResult()?.addressLine1())
+                self.addressLabel.text = response?.firstResult()?.addressLine1()
+            }
+        }
+        print(marker.position)
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
