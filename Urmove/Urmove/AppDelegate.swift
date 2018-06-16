@@ -16,7 +16,10 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var userData = customer()
+    var userAccount: Bool?
+    var userCollection: CollectionReference!
+    var userRef: DocumentReference!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,8 +29,83 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         //var navigationBarAppearance = UINavigationBar.appearance()
         //navigationBarAppearance.tintColor = UIColor.init(red: 255.0, green: 174.0, blue: 66.0, alpha: 1.0)
-        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let user = user{
+                self.getCars(userID: user.uid)
+                let db = Firestore.firestore()
+                self.userRef = db.collection("users").document(user.uid)
+                self.userCollection = db.collection("users")
+                self.userRef.getDocument { (document, error) in
+                    
+                    if (document?.exists)!{
+                        //self.userAccount = true
+                        self.userAccount = true
+                        
+                        let loggedInUserData = customer()
+                        let dict = document?.data()
+                        let email = dict!["email"] as? String
+                        let firstName = dict!["firstName"] as? String
+                        let lastName = dict!["lastName"] as? String
+                        let authenticated = dict!["authenticated"] as? Bool
+                        let phoneNumber = dict!["phoneNumber"] as? String
+                        let userID = dict!["userID"] as? String
+                        
+                        self.userData.email = email
+                        self.userData.firstName = firstName
+                        self.userData.lastName = lastName
+                        self.userData.authenticated = authenticated
+                        self.userData.phoneNumber = phoneNumber
+                        self.userData.userID = userID
+                        self.getCars(userID: user.uid)
+                       
+                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "carSelection") as! CarSelectionViewController
+                        vc.userData = self.userData
+                        let navigation = UINavigationController(rootViewController: vc)
+                        navigation.navigationBar.isTranslucent = false
+                        navigation.navigationBar.barTintColor = UIColor(displayP3Red: 40.0/250, green: 39.0/250, blue: 46.0/250, alpha: 1.0)
+                        navigation.navigationBar.tintColor = UIColor(displayP3Red: 242.0/250, green: 57.0/250, blue: 45.0/250, alpha: 1.0)
+                        navigation.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                        navigation.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                        
+                        self.window?.rootViewController = navigation
+                        self.window?.makeKeyAndVisible()
+                        
+                    }
+                }
+                
+            }
+            
+            
+        }
         return true
+    }
+    func getCars(userID: String){
+        let userCarCollection = Firestore.firestore().collection("users").document(userID).collection("cars")
+        userCarCollection.getDocuments { (snapshot, error) in
+            if let error = error{
+                print(error)
+            }else{
+                for document in snapshot!.documents{
+                    let newCar = car()
+                    let dict = document.data()
+                    let model = dict["model"] as? String
+                    let year = dict["year"] as? String
+                    let make = dict["make"] as? String
+                    let color = dict["color"] as? String
+                    let tag = dict["tag"] as? String
+                    let fuelCapacity = dict["fuelCapacity"] as? Double
+                    newCar.color = color
+                    newCar.make = make
+                    newCar.model = model
+                    newCar.tag = tag
+                    newCar.year = year
+                    newCar.fuelCapacity = fuelCapacity
+                    self.userData.carList.append(newCar)
+                    
+                }
+                print(self.userData.carList)
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

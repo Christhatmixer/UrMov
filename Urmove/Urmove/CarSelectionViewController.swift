@@ -19,7 +19,8 @@ class CarSelectionViewController: UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var carCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        pageControl.numberOfPages = userData.carList.count
+        
         centeredCollectionViewFlowLayout = carCollectionView.collectionViewLayout as! CenteredCollectionViewFlowLayout
         carCollectionView.decelerationRate = UIScrollViewDecelerationRateFast
         carCollectionView.delegate = self
