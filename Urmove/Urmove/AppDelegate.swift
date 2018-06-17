@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         let navigation = UINavigationController(rootViewController: vc)
                         navigation.navigationBar.isTranslucent = false
                         navigation.navigationBar.barTintColor = UIColor(displayP3Red: 40.0/250, green: 39.0/250, blue: 46.0/250, alpha: 1.0)
-                        navigation.navigationBar.tintColor = UIColor(displayP3Red: 242.0/250, green: 57.0/250, blue: 45.0/250, alpha: 1.0)
+                        navigation.navigationBar.tintColor = UIColor(displayP3Red: 245.0/250, green: 174.0/250, blue: 66.0/250, alpha: 1.0)
                         navigation.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
                         navigation.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
                         
