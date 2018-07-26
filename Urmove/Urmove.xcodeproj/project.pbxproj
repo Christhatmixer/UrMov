@@ -14,6 +14,10 @@
 		AA55CFF120B69AB200D7BA0F /* GasOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CFF020B69AB200D7BA0F /* GasOrderViewController.swift */; };
 		AA55CFF320B75F0400D7BA0F /* CarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CFF220B75F0400D7BA0F /* CarCollectionViewCell.swift */; };
 		AA65C1E720B0C8890007553E /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65C1E620B0C8890007553E /* PhoneVerificationViewController.swift */; };
+		AA82F4F32102E725007A4B98 /* PastFillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82F4F22102E725007A4B98 /* PastFillsViewController.swift */; };
+		AA82F4F521057C30007A4B98 /* PastFillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82F4F421057C30007A4B98 /* PastFillTableViewCell.swift */; };
+		AA8F44F120E43ACE00361521 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F44F020E43ACE00361521 /* AddCarViewController.swift */; };
+		AA8F44F320E455CA00361521 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F44F220E455CA00361521 /* MenuTableViewController.swift */; };
 		AAAA9EA2209EA0280035CDEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EA1209EA0280035CDEA /* AppDelegate.swift */; };
 		AAAA9EA4209EA0280035CDEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9EA3209EA0280035CDEA /* ViewController.swift */; };
 		AAAA9EA7209EA0280035CDEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAAA9EA5209EA0280035CDEA /* Main.storyboard */; };
@@ -66,6 +70,10 @@
 		AA55CFF020B69AB200D7BA0F /* GasOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasOrderViewController.swift; sourceTree = "<group>"; };
 		AA55CFF220B75F0400D7BA0F /* CarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA65C1E620B0C8890007553E /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		AA82F4F22102E725007A4B98 /* PastFillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastFillsViewController.swift; sourceTree = "<group>"; };
+		AA82F4F421057C30007A4B98 /* PastFillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastFillTableViewCell.swift; sourceTree = "<group>"; };
+		AA8F44F020E43ACE00361521 /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
+		AA8F44F220E455CA00361521 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		AAAA9E9E209EA0280035CDEA /* Urmove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Urmove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAAA9EA1209EA0280035CDEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAAA9EA3209EA0280035CDEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +196,10 @@
 				AA55CFF220B75F0400D7BA0F /* CarCollectionViewCell.swift */,
 				AA2F166E20BCE4B800F4A6F6 /* CarSelectionViewController.swift */,
 				AADEEB0420D3A17E000FFE85 /* style.json */,
+				AA8F44F020E43ACE00361521 /* AddCarViewController.swift */,
+				AA8F44F220E455CA00361521 /* MenuTableViewController.swift */,
+				AA82F4F22102E725007A4B98 /* PastFillsViewController.swift */,
+				AA82F4F421057C30007A4B98 /* PastFillTableViewCell.swift */,
 			);
 			path = Urmove;
 			sourceTree = "<group>";
@@ -372,11 +384,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Urmove/Pods-Urmove-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -465,6 +481,9 @@
 				"${BUILT_PRODUCTS_DIR}/SJFluidSegmentedControl/SJFluidSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -495,6 +514,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SJFluidSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -519,14 +541,18 @@
 				AAAA9EA4209EA0280035CDEA /* ViewController.swift in Sources */,
 				AA55CFEF20B680FB00D7BA0F /* gasRequest.swift in Sources */,
 				AAAA9EDE20A4E2C70035CDEA /* SignupViewController.swift in Sources */,
+				AA8F44F120E43ACE00361521 /* AddCarViewController.swift in Sources */,
 				AADDBC2C20A7E05B00B14618 /* CarInfoViewController.swift in Sources */,
 				AAB0123E20B21AB500CF90B5 /* codeVerificationViewController.swift in Sources */,
 				AAAA9EDC20A0CF370035CDEA /* car.swift in Sources */,
 				AAAA9ED8209F9D600035CDEA /* customer.swift in Sources */,
 				AA65C1E720B0C8890007553E /* PhoneVerificationViewController.swift in Sources */,
+				AA82F4F32102E725007A4B98 /* PastFillsViewController.swift in Sources */,
 				AAAA9EA2209EA0280035CDEA /* AppDelegate.swift in Sources */,
 				AAB0124120B2B52500CF90B5 /* customerMapViewController.swift in Sources */,
 				AA2F166F20BCE4B800F4A6F6 /* CarSelectionViewController.swift in Sources */,
+				AA8F44F320E455CA00361521 /* MenuTableViewController.swift in Sources */,
+				AA82F4F521057C30007A4B98 /* PastFillTableViewCell.swift in Sources */,
 				AA55CFF120B69AB200D7BA0F /* GasOrderViewController.swift in Sources */,
 				AAAA9EAA209EA0280035CDEA /* Urmove.xcdatamodeld in Sources */,
 				AAAA9ED5209F9A1B0035CDEA /* driver.swift in Sources */,

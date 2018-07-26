@@ -11,6 +11,8 @@ import GoogleMaps
 import CoreLocation
 import GooglePlaces
 import SnapKit
+import Firebase
+import NVActivityIndicatorView
 let mapStyle = "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyALoLhshrdNCqCEmOZvD-SfMmmMH7VVGe8&center=-33.87221166880314,151.14313354492182&zoom=11&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=480x360"
 class CustomerHomeViewController: UIViewController,CLLocationManagerDelegate,GMSAutocompleteViewControllerDelegate,GMSMapViewDelegate  {
     var userData = customer()
@@ -22,12 +24,14 @@ class CustomerHomeViewController: UIViewController,CLLocationManagerDelegate,GMS
     var newGasRequest = gasRequest()
     let marker = GMSMarker()
     let geoCoder = GMSGeocoder()
+    var selectedCar = car()
     @IBOutlet weak var mapView: GMSMapView!
     
+    @IBOutlet weak var orderButton: UIButton!
     @IBOutlet weak var addressLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(newGasRequest.price)
 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -64,6 +68,7 @@ class CustomerHomeViewController: UIViewController,CLLocationManagerDelegate,GMS
         } catch {
             print("failed to load style")
         }
+        orderButton.layer.cornerRadius = orderButton.bounds.width / 2
 
         // Do any additional setup after loading the view.
     }
@@ -126,6 +131,43 @@ class CustomerHomeViewController: UIViewController,CLLocationManagerDelegate,GMS
     
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    @IBAction func orderButtonFunc(_ sender: Any) {
+        let loadingIndicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40), type: NVActivityIndicatorType.circleStrokeSpin, color: UIColor(displayP3Red: 33.0/255, green: 141.0/255, blue: 22/255, alpha: 1.0), padding: 0)
+        loadingIndicator.center = self.view.center
+        loadingIndicator.startAnimating() //UI will freeze alamofire. Give user something to look at
+        
+        self.view.addSubview(loadingIndicator)
+        self.newGasRequest.latitude = marker.position.latitude
+        self.newGasRequest.longitude = marker.position.longitude
+        self.newGasRequest.address = addressLabel.text
+        let data: [String: Any] = [
+            "latitude":newGasRequest.latitude!,
+            "longitude":newGasRequest.longitude!,
+            "address":newGasRequest.address!,
+            //"textPrice": newGasRequest.textPrice!,
+            "price": self.newGasRequest.price!,
+            "car": [
+                "make":self.selectedCar.make,
+                "model":self.selectedCar.model,
+                "tag":self.selectedCar.tag,
+                "image":self.selectedCar.image
+                
+            ],
+            "userID": userData.userID!
+            
+        ]
+        let requestCollection = Firestore.firestore().collection("requests")
+        
+        requestCollection.addDocument(data: data) { (error) in
+            if let error = error{
+                loadingIndicator.stopAnimating()
+                print(error)
+            }else{
+                loadingIndicator.stopAnimating()
+                
+            }
+        }
     }
     
    

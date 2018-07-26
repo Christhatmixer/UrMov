@@ -121,6 +121,10 @@ PODS:
   - SJFluidSegmentedControl (1.1.2)
   - SkyFloatingLabelTextField (3.4.1)
   - SnapKit (4.0.0)
+  - Stripe (13.0.0)
+  - TwitterCore (3.1.0)
+  - TwitterKit (3.3.0):
+    - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -141,6 +145,8 @@ DEPENDENCIES:
   - SJFluidSegmentedControl (from `https://github.com/adornoventura/SJFluidSegmentedControl.git`)
   - SkyFloatingLabelTextField (~> 3.0)
   - SnapKit (~> 4.0.0)
+  - Stripe
+  - TwitterKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -180,6 +186,9 @@ SPEC REPOS:
     - SDWebImage
     - SkyFloatingLabelTextField
     - SnapKit
+    - Stripe
+    - TwitterCore
+    - TwitterKit
 
 EXTERNAL SOURCES:
   SJFluidSegmentedControl:
@@ -228,7 +237,10 @@ SPEC CHECKSUMS:
   SJFluidSegmentedControl: 75ca518e35fd27afd1e648bdc275110e8dfbc651
   SkyFloatingLabelTextField: 8085f20f57f74a00cfcae58099299faa1a971035
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Stripe: 542f2c4493ce31a99fa041fe4973206e8c868f29
+  TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
+  TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: a2107ba217559a30f48f7fb211a0087a99eec6ac
+PODFILE CHECKSUM: e0138ff6d906886c8b60e14fb846be22843af04a
 
 COCOAPODS: 1.5.0

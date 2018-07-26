@@ -41,11 +41,14 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     // Firestore
-    func docFacebookUserFinder(userID: String, userName: String, displayName: String ){
+    func docFacebookUserFinder(userID: String, userName: String, displayName: String){
         let db = Firestore.firestore()
         userRef = db.collection("users").document(userID)
         userCollection = db.collection("users")
         userRef.getDocument { (document, error) in
+            if let document = document{
+                print(document.exists)
+            }
             
             if (document?.exists)!{
                 self.userAccount = true
@@ -66,9 +69,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 self.userData.phoneNumber = phoneNumber
                 self.userData.userID = userID
                 
+                print(self.userData.authenticated)
+                
                 if self.userData.authenticated == false{
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "phoneVerification")
-                    let navigation = UINavigationController(rootViewController: vc!)
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "phoneVerification") as! PhoneVerificationViewController
+                    vc.userData = self.userData
+                    let navigation = UINavigationController(rootViewController: vc)
                     self.present(navigation, animated: true, completion: nil)
                 }else{
                     
@@ -81,11 +87,32 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     
                 }
                 
-                self.performSegue(withIdentifier: "authenticated", sender: self)
+                
                 
             }else{
                 self.userAccount = false
                 print("aint shit here")
+                let newUser = ["userID":userID,
+                               "firstName":displayName,
+                               "authenticated": false
+                    
+                    ] as [String : Any]
+                let newUserRef = Firestore.firestore().collection("users").document(userID)
+                newUserRef.setData(newUser, completion: nil)
+                let loggedInUserData = customer()
+                loggedInUserData.userID = userID
+                self.userData = loggedInUserData
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "carInfo") as! CarInfoViewController
+                vc.userData = self.userData
+                let navigation = UINavigationController(rootViewController: vc)
+                navigation.navigationBar.isTranslucent = false
+                navigation.navigationBar.barTintColor = UIColor(displayP3Red: 40.0/250, green: 39.0/250, blue: 46.0/250, alpha: 1.0)
+                navigation.navigationBar.tintColor = UIColor(displayP3Red: 255.0/250, green: 174.0/250, blue: 66.0/250, alpha: 1.0)
+                navigation.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                navigation.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                self.present(navigation, animated: true, completion: nil)
+                
+                //self.performSegue(withIdentifier: "authenticated", sender: self)
               
             }
             
@@ -148,9 +175,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         
     }
+   
+    
     // LOGIN FUNCTIONS
     //login functions
     func facebookLoginButtonClicked() {
+        print("clicked")
         let loginManager = LoginManager()
         loginManager.logIn(readPermissions: [ReadPermission.publicProfile, ReadPermission.email], viewController: self) { loginResult in
             switch loginResult {
@@ -178,7 +208,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                     print(error.localizedDescription)
                     return
                 }else{
-                    print(user?.uid)
+                    print(user?.email)
                     self.docFacebookUserFinder(userID: (user?.uid)!,userName: (user?.displayName)!, displayName: (user?.displayName)!)
                     
                     

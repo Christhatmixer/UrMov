@@ -15,6 +15,8 @@ class PhoneVerificationViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        phoneNumberTextField.textColor = UIColor.white
+        
 
         // Do any additional setup after loading the view.
     }
@@ -40,9 +42,10 @@ class PhoneVerificationViewController: UIViewController {
             print(response.response)
             print(response.result.description)
             if response.result.description == "SUCCESS"{
+                loadingIndicator.stopAnimating()
                 self.performSegue(withIdentifier: "codeVerification", sender: self)
             }
-            loadingIndicator.stopAnimating()
+            
         }
      
     }

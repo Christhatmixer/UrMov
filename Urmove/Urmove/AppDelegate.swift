@@ -12,6 +12,9 @@ import Firebase
 import GoogleMaps
 import GooglePlaces
 import IQKeyboardManagerSwift
+import FBSDKLoginKit
+import FBSDKCoreKit
+import TwitterKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -29,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         //var navigationBarAppearance = UINavigationBar.appearance()
         //navigationBarAppearance.tintColor = UIColor.init(red: 255.0, green: 174.0, blue: 66.0, alpha: 1.0)
+         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user{
                 self.getCars(userID: user.uid)
@@ -57,18 +61,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         self.userData.phoneNumber = phoneNumber
                         self.userData.userID = userID
                         self.getCars(userID: user.uid)
-                       
-                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "carSelection") as! CarSelectionViewController
-                        vc.userData = self.userData
-                        let navigation = UINavigationController(rootViewController: vc)
-                        navigation.navigationBar.isTranslucent = false
-                        navigation.navigationBar.barTintColor = UIColor(displayP3Red: 40.0/250, green: 39.0/250, blue: 46.0/250, alpha: 1.0)
-                        navigation.navigationBar.tintColor = UIColor(displayP3Red: 245.0/250, green: 174.0/250, blue: 66.0/250, alpha: 1.0)
-                        navigation.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
-                        navigation.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                        print(self.userData.authenticated!)
+                        if self.userData.authenticated! == false{
+                            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "phoneVerification") as! PhoneVerificationViewController
+                            vc.userData = self.userData
+                            let navigation = UINavigationController(rootViewController: vc)
+                            navigation.navigationBar.isTranslucent = false
+                            navigation.navigationBar.barTintColor = UIColor(displayP3Red: 40.0/250, green: 39.0/250, blue: 46.0/250, alpha: 1.0)
+                            navigation.navigationBar.tintColor = UIColor(displayP3Red: 245.0/250, green: 174.0/250, blue: 66.0/250, alpha: 1.0)
+                            navigation.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                            navigation.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                            self.window?.rootViewController = navigation
+                            self.window?.makeKeyAndVisible()
+                        }else{
+                            
+                            
+                            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "carSelection") as! CarSelectionViewController
+                            vc.userData = self.userData
+                            let navigation = UINavigationController(rootViewController: vc)
+                            navigation.navigationBar.isTranslucent = false
+                            navigation.navigationBar.barTintColor = UIColor(displayP3Red: 40.0/250, green: 39.0/250, blue: 46.0/250, alpha: 1.0)
+                            navigation.navigationBar.tintColor = UIColor(displayP3Red: 245.0/250, green: 174.0/250, blue: 66.0/250, alpha: 1.0)
+                            navigation.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                            navigation.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(displayP3Red: 243.0/250, green: 245.0/250, blue: 246.0/250, alpha: 1.0)]
+                            self.window?.rootViewController = navigation
+                            self.window?.makeKeyAndVisible()
+                            //let navigation = UINavigationController(rootViewController: vc)
+                            //self.present(navigation, animated: true, completion: nil)
+                            
+                        }
                         
-                        self.window?.rootViewController = navigation
-                        self.window?.makeKeyAndVisible()
+                       
+                        
                         
                     }
                 }
@@ -130,6 +154,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if TWTRTwitter.sharedInstance().application(app, open: url, options: options){
+            return true
+        }else{
+            return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation] ?? [])
+        }
+    }
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     // MARK: - Core Data stack

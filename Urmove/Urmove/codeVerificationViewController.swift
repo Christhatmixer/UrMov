@@ -47,7 +47,13 @@ class codeVerificationViewController: UIViewController {
                         print(error)
                     }else{
                         print("success")
-                        self.performSegue(withIdentifier: "customerHome", sender: self)
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "carSelection") as! CarSelectionViewController
+                        vc.userData = self.userData
+                        let navigation = UINavigationController(rootViewController: vc)
+                        
+                        
+                        self.present(navigation, animated: true, completion: nil)
+                        //self.performSegue(withIdentifier: "customerHome", sender: self)
                     }
                 })
             }

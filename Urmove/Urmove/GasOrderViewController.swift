@@ -20,6 +20,7 @@ class GasOrderViewController: UIViewController, SJFluidSegmentedControlDataSourc
     var gasPrice = 2.88
     var gasNeeded: Double?
     var newGasRequest = gasRequest()
+    var price: Double?
    
     @IBOutlet weak var octaneSegmentView: SJFluidSegmentedControl!
     @IBOutlet weak var ninetyThreeView: UIView!
@@ -42,14 +43,19 @@ class GasOrderViewController: UIViewController, SJFluidSegmentedControlDataSourc
     
     @IBAction func orderGas(_ sender: Any) {
         let octane = octaneList[octaneSegmentView.currentSegment]
-        let gasNeeded = (fuelSlider._maximumValue/100.0 - fuelSlider._minimumValue/100.0) * selectedCar.fuelCapacity!
+        let gasNeeded = (fuelSlider._maximumValue/100.0 - fuelSlider._minimumValue/100.0) * selectedCar.fuelCapacity! ?? 10
         
-        let newGasRequest = gasRequest()
-        newGasRequest.gasAmount = Double(gasNeeded)
-        newGasRequest.car = self.selectedCar
-        newGasRequest.octane = octaneList[octaneSegmentView.currentSegment]
+      
+        self.newGasRequest.gasAmount = Double(gasNeeded)
+        self.newGasRequest.car = self.selectedCar
+        self.newGasRequest.octane = octaneList[octaneSegmentView.currentSegment]
+        self.newGasRequest.price = self.price!
+        print(self.price)
+        self.newGasRequest.textPrice = self.priceLabel.text
         let vc = storyboard?.instantiateViewController(withIdentifier: "customerHome") as! CustomerHomeViewController
         vc.newGasRequest = self.newGasRequest
+        vc.selectedCar = self.selectedCar
+        vc.userData = self.userData
         self.navigationController?.pushViewController(vc, animated: true)
         
         
@@ -74,13 +80,13 @@ class GasOrderViewController: UIViewController, SJFluidSegmentedControlDataSourc
     }
     func circularSlider(_ slider: MSCircularSlider, valueChangedTo firstValue: Double, secondValue: Double, isFirstHandle: Bool?, fromUser: Bool) {
         
-        print(firstValue)
-        print(secondValue)
+    
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         let gasNeeded = (secondValue/100.0 - firstValue/100.0) * 8
-        var price = gasNeeded * 2.88
-        priceLabel.text = numberFormatter.string(from: price as NSNumber)
+        self.price = gasNeeded * 2.88
+        print(self.price)
+        priceLabel.text = numberFormatter.string(from: price! as NSNumber)
     }
     
 
