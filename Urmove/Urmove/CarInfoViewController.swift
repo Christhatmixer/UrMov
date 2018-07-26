@@ -48,7 +48,7 @@ class CarInfoViewController: UIViewController {
             
             return
         }
-        let carOne = ["color":color,"model":model,"make":make,"tag":tag] as [String: Any]
+        let carOne = ["color":color,"model":model,"make":make,"tag":tag, "fuelCapacity": 10] as [String: Any]
         let userCarCollection = Firestore.firestore().collection("users").document(userData.userID!).collection("cars")
         userCarCollection.document("car1").setData(carOne)
         let newCar = car()
